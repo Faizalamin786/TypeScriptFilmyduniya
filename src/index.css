@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #111725;
+    color: white;
+}
+
+.header {
+    background-color: #111725;
+    ;
+}
+
+.card-container {
+    /* display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minmax values as needed */
+    gap: 15px; /* Adjust the gap between items */
+    justify-content: space-evenly;
+}
+
+.card-container a {
+    display: block;
+    border: 2px solid rgb(143, 150, 143);
+    background-color: rgb(26, 26, 26);
+    border-radius: 5px;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all 0.5s;
+    max-width: 200px;
+}
+
+.card-container a:hover {
+    scale: 1.02;
+}
+
+.card span {
+    color: gray;
+}
+
+
+.react-star-comp {
+    padding-left: 10px;
+}
+
+
+.disable-text-selection {
+    user-select: none;
+}
+
+.react-stars-div a:active,
+.react-stars-div a:focus {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.search-container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+
+@media screen and (max-width: 460px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        font-size: 0.9rem;
+    }
+
+    .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .react-star-comp span {
+        font-size: 15px !important
+    }
+}
